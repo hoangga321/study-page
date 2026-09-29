@@ -59,3 +59,4 @@ function updateClock() {
     clockTime.textContent = `${hours}:${minutes}:${seconds}`;
 }
 updateClock();
+setInterval(updateClock, 1000);
