@@ -14,6 +14,8 @@ COLORS
     --green: #00a2af;
     --grey: #333;
     --white: #fff;
+    --bg: var(--white);
+    --text: var(--grey);
 }
 
 /*
@@ -64,10 +66,38 @@ html {
 
 body {
     /* 전체 글자 색상  */
-	color: var(--grey);
+    background: var(--bg);
+	color: var(--text);
 	font-family:  "Noto Sans KR", sans-serif;
+    transition: background .3s, color .3s;
 }
 
+body.dark{
+    --bg : #121212;
+    --text : #e0e0e0;
+}
+
+.btn-theme {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height : 2.75rem;
+    aspect-ratio: 1;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+    transition: .3s;
+}
+body.dark.btn-theme{
+    background: var(--yellow);
+}
 
 /*
 HEADER
@@ -145,6 +175,7 @@ MAIN
     background-size: cover;
     background-blend-mode:screen;
     height: 100vh;
+    color: var(--grey);
     animation: bg-color 24s infinite;  /* @keyframes bg-color 설정해야 나옴. */
 
     display: flex;
@@ -200,7 +231,21 @@ MAIN
 #main p {
     text-align: center;
 }
-
+/* CLOCK */
+.clock {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.clock-date {
+    display: block;
+    margin-bottom: .5rem;
+}
+.clock-time {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 /*
 ABOUT
 ================================================ */
@@ -321,11 +366,13 @@ APPLY
     width: 100%;
     margin-bottom: 1.5rem;
     font-family: inherit;
+    color: var(--grey);
 }
 
 .apply-textarea {
     min-height: 6rem;
     resize: vertical;
+    margin-bottom: .5rem;
 }
 
 .apply-btn {
@@ -335,6 +382,16 @@ APPLY
     width: 100%;
     padding: 1rem;
     margin-top: 1rem;
+}
+.char-count{
+    color:var(--white);
+    text-align: right;
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
+}
+.char-count.warn{
+    color: var(--red);
+    font-weight: bold;
 }
 
 /*
