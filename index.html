@@ -54,43 +54,59 @@
 
     <!-- Curriculum Section -->
     <section id="curriculum">
-        <div class="wrapper">
-            <h2>Curriculum</h2>
-            <table class="curriculum-table">
-                <tr>
-                    <td class="week">Week 1</td>
-                    <td class="content">HTML/CSS Basics</td>
-                </tr>
-                <tr>
-                    <td class="week">Week 2</td>
-                    <td class="content">JavaScript Fundamentals</td>
-                </tr>
-                <tr>
-                    <td class="week">Week 3</td>
-                    <td class="content">React Basics</td>
-                </tr>
-                <tr>
-                    <td class="week">Week 4</td>
-                    <td class="content">Node.js and Express</td>
-                </tr>
-                <tr>
-                    <td class="week">Week 5</td>
-                    <td class="content">Database Integration</td>
-                </tr>
-                <tr>
-                    <td class="week">Week 6</td>
-                    <td class="content">Frontend</td>
-                </tr>
-                <tr>
-                    <td class="week">Week 7</td>
-                    <td class="content">Vercel Deployment</td>
-                </tr>
-                <tr>
-                    <td class="week">Week 8</td>
-                    <td class="content">Final Project and Presentation</td>
-                </tr>
-            </table>
-        </div>
+        <h2>Curriculum</h2>
+            <div class="wrapper">
+                <div class ="tab-menu">
+                    <button class= "tab-btn active" data-tab="tab-front">Frontend</button>
+                    <button class= "tab-btn" data-tab="tab-back">Backend</button>
+                    <button class= "tab-btn" data-tab="tab-launch">Launch  </button>
+                </div>
+                <div class="tab-panel active" id="tab-front">
+                    <table class="curriculum-table">
+                        <tr>
+                            <td class="week">Week 1</td>
+                            <td class="content">HTML/CSS Basics</td>
+                        </tr>
+                        <tr>
+                        <td class="week">Week 2</td>
+                        <td class="content">JavaScript Fundamentals</td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 3</td>
+                            <td class="content">React Basics</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-panel" id="tab-back">
+                    <table class="curriculum-table">
+                        <tr>
+                            <td class="week">Week 4</td>
+                            <td class="content">Node.js and Express</td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 5</td>
+                            <td class="content">Database Integration</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-panel" id="tab-launch">
+                    <table class="curriculum-table">
+                        <tr>
+                            <td class="week">Week 6</td>
+                            <td class="content">Frontend</td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 7</td>
+                            <td class="content">Vercel Deployment</td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 8</td>
+                            <td class="content">Final Project and Presentation</td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
     </section>
 
     <!-- Mentors Section -->

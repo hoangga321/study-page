@@ -3,6 +3,20 @@ const btnMenu = document.querySelector('.btn-menu');
 // main nav
 const mainNav = document.querySelector('.main-nav');
 
+// curriculum tabs
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        tabButtons.forEach((tabButton) => tabButton.classList.remove('active'));
+        tabPanels.forEach((panel) => panel.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+    });
+});
+
 // .btn-menu click event
 btnMenu.addEventListener('click', () => {
     mainNav.classList.toggle('open-menu');

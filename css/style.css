@@ -277,9 +277,47 @@ CURRICULUM
     color: var(--white);
 }
 
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: .75rem;
+    padding: .65rem 1.2rem;
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    transition: background .2s, color .2s;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--grey);
+}
+
+.tab-btn:focus-visible {
+    outline: 2px solid var(--grey);
+    outline-offset: 3px;
+}
+
 .curriculum-table {
     color: var(--white);
     width: 100%;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
 }
 
 .curriculum-table tr {
