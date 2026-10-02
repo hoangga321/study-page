@@ -340,6 +340,58 @@ CURRICULUM
 
 
 /*
+GALLERY
+================================================ */
+#gallery {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 1.5rem;
+    color: var(--green);
+}
+
+.gallery-main {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    max-height: 480px;
+    margin: 0 auto 1rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.gallery-thumbs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery-thumbs img {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border: 3px solid transparent;
+    border-radius: .5rem;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: .7;
+    transition: border-color .2s, opacity .2s;
+}
+
+.gallery-thumbs img:hover,
+.gallery-thumbs img.active {
+    border-color: var(--green);
+    opacity: 1;
+}
+
+
+/*
 MENTORS
 ================================================ */
 #mentors {

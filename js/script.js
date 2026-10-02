@@ -17,6 +17,20 @@ tabButtons.forEach((button) => {
     });
 });
 
+// gallery
+const galleryMain = document.querySelector('.gallery-main');
+const galleryThumbs = document.querySelectorAll('.gallery-thumbs img');
+
+galleryThumbs.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', () => {
+        galleryMain.src = thumbnail.src;
+        galleryMain.alt = thumbnail.alt;
+
+        galleryThumbs.forEach((item) => item.classList.remove('active'));
+        thumbnail.classList.add('active');
+    });
+});
+
 // .btn-menu click event
 btnMenu.addEventListener('click', () => {
     mainNav.classList.toggle('open-menu');
